@@ -31,15 +31,39 @@ var seattle = {
   }
 };
 
+var tokyo = {
+  location: 'Tokyo',
+  minCust: 3,
+  maxCust: 24,
+  avCookSale: 1.2,
+  hourlySalesArray: [],
+  dailySalesTotal: 0,
+  calcHourlySalesArray: function () {
+    for (var i = 0; i < hoursOfOperation.length; i++) {
+      var hourlySales = Math.ceil(getRandomIntInclusive(this.minCust, this.maxCust) * this.avCookSale);
+      this.hourlySalesArray.push(hourlySales);
+      this.dailySalesTotal += hourlySales;
+    }
+  },
+  render: function() {
+    this.calcHourlySalesArray();
+    //remember to change the getElementById.
+    var ulEl = document.getElementById('tokyo');
+    for (var i = 0; i < hoursOfOperation.length; i++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = `${hoursOfOperation[i]}: ${this.hourlySalesArray[i]} cookies`;
+      ulEl.append(liEl);
+    }
+    liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.dailySalesTotal} cookies`;
+    ulEl.append(liEl);
+  }
+};
+
 // source from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// all below goes inside render method
-// var liEl = document.createElement('li');
-// liEl.textContent = 'array[i]';
-// ulEl.append(liEl);
-
 seattle.render();
-
+tokyo.render();
