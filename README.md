@@ -6,3 +6,4 @@ Got the Tokyo object completed and rendered.
 Updated Paris and Lima.
 
 8-8: Completed all the logic for the Js code. Made some wicked cool styles for the css and called it a night.
+8-13: adding content to the index for Lab 08b
