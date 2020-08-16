@@ -126,20 +126,22 @@ function handleSubmit(event) {
   event.preventDefault();
 
   var newLocation = event.target.new_location.value; // grabbing the sales form location input
-
+  var upperNewLocation = newLocation.charAt(0).toUpperCase() + newLocation.slice(1); // making the first letter of the location value capital source https://dzone.com/articles/capitalize-first-letter-string-javascript
   var newMinCust = event.target.new_min_cust.value;
-
   var newMaxCust = event.target.new_max_cust.value;
-
   var newAvCookSale = event.target.new_average_cookies.value;
-
-  new Store(newLocation, newMinCust, newMaxCust, newAvCookSale);
-  //console.log(allLocations);
-  tableBodyEl.innerHTML = ''; // again we are now rendering all the data here so we clear the table out for the new data
-  totalsOfAllEl.innerHTML = '';// again we are now rendering all the data here so we clear the table out for the new data
-  totalOfAllLocationsAllDay = 0; // because we are now rendering all the locations in this function we want to reset totalOfAllLocationsAllDay variable.
-  renderAllStores(); // tells the code to add the new line
-  footerTable(); // now we render the footerTable function
+  if (newMaxCust < newMinCust) {
+    document.getElementById('sales-form').reset();
+    alert('Max customers must be more than min customers. Try entering the data again.');
+  } else {
+    new Store(upperNewLocation, newMinCust, newMaxCust, newAvCookSale);
+    //console.log(allLocations);
+    tableBodyEl.innerHTML = ''; // again we are now rendering all the data here so we clear the table out for the new data
+    totalsOfAllEl.innerHTML = '';// again we are now rendering all the data here so we clear the table out for the new data
+    totalOfAllLocationsAllDay = 0; // because we are now rendering all the locations in this function we want to reset totalOfAllLocationsAllDay variable.
+    renderAllStores(); // tells the code to add the new line
+    footerTable(); // now we render the footerTable function
+  }
 }
 
 function renderAllStores() {

@@ -17,14 +17,14 @@
     <form id ="sales-form">
       <fieldset>
         <legend>New Location Form</legend>
-        <label for="new_location">Type the new location name here:</label>
-        <input type="text" placeholder="Location Name" id="new_location" name="new_location">
-        <label for="new_min_cust">The minimun customers: </label>
-        <input type="number" placeholder="1" id="new_min_cust" name="new_min_cust" min="1">
-        <label for="new_max_cust">The maximum customers: </label>
-        <input type="number" placeholder="1000" id="new_max_cust" name="new_max_cust" min="1">
-        <label for="new_average_cookies">The average cookie sales per hour: </label>
-        <input type="float" placeholder="1.5" id="new_average_cookies" name="new_average_cookies" min="0.1">
+        <label class="new_line" for="new_location">Type the new location name here:</label>
+        <input class="new_line" type="text" placeholder="Location Name" id="new_location" name="new_location" minlength="1" required>
+        <label class="new_line" for="new_min_cust">Enter the minimun customers per day: </label>
+        <input class="new_line" type="number" placeholder="1" id="new_min_cust" name="new_min_cust" min="1" required>
+        <label class="new_line" for="new_max_cust">Enter the maximum customers per day: </label>
+        <input class="new_line" type="number" placeholder="1000" id="new_max_cust" name="new_max_cust" min="1" required>
+        <label class="new_line" for="new_average_cookies">Enter the average cookie sales per hour: </label>
+        <input class="new_line" type="float" placeholder="1.5" id="new_average_cookies" name="new_average_cookies" min="0.1" required>
         <!-- creating the submit button-->
         <button type="submit">Submit</button>
       </fieldset>

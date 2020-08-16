@@ -13,4 +13,4 @@ Updated Paris and Lima.
 
 8-13: adding content to the index for Lab 08b
 
-8-15: added form functionality and got it to work!
+8-15: added form functionality and got it to work! Then added validation. Added an if statement to see if min customers are higher than max customers. Then I converted the first letter of the input location to a capital letter. Source: https://dzone.com/articles/capitalize-first-letter-string-javascript

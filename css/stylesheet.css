@@ -240,3 +240,58 @@ footer p {
   padding-left: 2%;
   background-color: darkolivegreen;
 }
+
+/* form styles */
+
+#sales-form {
+  width: 955px;
+  margin: auto;
+  background-color: darkolivegreen;
+  text-shadow: 2px 1px 1px black;
+  color: rgb(211, 97, 44);
+  margin-bottom: 15px;
+  border: 2px solid black;
+  font-size: large;
+  margin-top: 5px;
+}
+
+legend {
+  display: block;
+  width: 80%;
+  margin: auto;
+  line-height: 25px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.new_line {
+  display: block;
+  width: 80%;
+  margin: auto;
+  line-height: 25px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 20%;
+  padding: 12px 15px;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  border: 2px solid rgb(211, 97, 44);
+}
+
+input:valid {
+  border: 2px solid black;
+}
