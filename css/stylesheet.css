@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
 body {
   background-color: wheat;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bangers', Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -54,6 +56,7 @@ h1 {
   padding-bottom: 2%;
   text-align: center;
   border: 2px solid black;
+  font-size: 50px;
 }
 /* end of header styles */
 
@@ -79,6 +82,7 @@ section p {
 }
 
 table {
+  font-family: Arial, Helvetica, sans-serif;
   width: 960px;
   text-align: left;
   border: 2px solid black;
@@ -110,10 +114,10 @@ main aside {
   background-color: rgb(211, 97, 44);
   color: darkolivegreen;
   text-shadow: 1px 1px 1px black;
-  margin-right: 25px;
+  margin-right: 50px;
   margin-top: 15px;
-  padding: 20px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 30px;
   border-radius: 10px;
 }
 
@@ -121,9 +125,10 @@ main img {
   float: right;
   box-shadow: 2px 2px 5px 1px black;
   border-radius: 10%;
-  height: 160px;
+  height: 220px;
   margin-right: 50px;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 main h2 {
@@ -132,10 +137,11 @@ main h2 {
   margin-left: 20px;
   padding-top: 15px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 main p {
-  font-size: 22px;
+  font-size: 30px;
   margin-left: 30px;
   padding-top: 15px;
 }
@@ -144,12 +150,12 @@ main ul {
   list-style-type: square;
   margin-left: 55px;
   padding-top: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 main li {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 30px;
 }
 /* Contact Us!*/
 #contact {
@@ -203,9 +209,16 @@ main li {
   text-shadow: 1px 1px 1px black;
   margin-top: 30px;
   text-align: center;
-  font-size: large;
+  font-size: 25px;
   padding: 20px;
   border-radius: 10px;
+}
+
+#chinook {
+  height: 130px;
+  margin-top: 50px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 #pictures img {
@@ -251,7 +264,7 @@ footer p {
   color: rgb(211, 97, 44);
   margin-bottom: 15px;
   border: 2px solid black;
-  font-size: large;
+  font-size: 30px;
   margin-top: 5px;
 }
 
@@ -259,11 +272,11 @@ legend {
   display: block;
   width: 80%;
   margin: auto;
+  font-size: 35px;
   line-height: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding-top: 10px;
   border-radius: 10px;
-  font-size: 25px;
 }
 
 .new_line {
